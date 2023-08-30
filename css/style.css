@@ -1,0 +1,1389 @@
+/*------------- CSS VRAIBLES -------------*/
+:root {
+  --acsentColor: #f77f1c;
+  --mainFont: Lato, Arial, Helvetica, sans-serif;
+  --mainBorder: 3px solid var(--acsentColor);
+  --mainBgColor: rgb(240, 240, 240);
+  --mainTextColor: #555;
+  --hoverAcsentColot: #d46d12;
+}
+
+/*------------- COMMON PROPERTIES ---------------*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/*  -- classes  --  */
+.row {
+  max-width: 2048px;
+  margin: 0 auto;
+  width: 90%;
+}
+.btn,
+.btn-outline:hover {
+  padding: 10px 30px;
+  background-color: var(--acsentColor);
+  border-radius: 40px;
+  border: var(--mainBorder);
+  transition: color ease-in-out 0.3s, background-color ease-in-out 0.3s;
+  color: white;
+  font: 300 1rem var(--mainFont);
+  cursor: pointer;
+}
+.btn:hover {
+  background-color: var(--hoverAcsentColot);
+  border-color: var(--hoverAcsentColot);
+}
+.btn-outline {
+  color: var(--acsentColor);
+  background-color: transparent;
+}
+.w60 {
+  width: 60%;
+  margin: 0 auto;
+}
+.up-btn .ionicon path {
+  color: var(--acsentColor);
+}
+.up-btn {
+  position: sticky;
+  margin-left: auto;
+  top: 550px;
+  width: 48px;
+  height: 48px;
+  z-index: 10;
+}
+/*  -- tags  --  */
+html {
+  font-family: var(--mainFont);
+  font-size: 20pt;
+  font-weight: 300;
+  line-height: 1.5;
+  color: var(--mainTextColor);
+  background-color: var(--mainBgColor);
+  scroll-behavior: smooth;
+}
+ul,
+ol {
+  list-style-type: none;
+}
+h2 {
+  font-size: 1.7rem;
+  font-weight: 300;
+  text-align: center;
+}
+h2::after {
+  content: '';
+  display: block;
+  width: 150px;
+  border-bottom: var(--mainBorder);
+  margin: 30px auto;
+}
+a {
+  text-decoration: none;
+}
+ion-icon {
+  color: var(--acsentColor);
+}
+
+/*  -- header  --  */
+header {
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)),
+    url(../img/hero.jpg) fixed no-repeat center;
+  height: 100vh;
+  background-size: cover;
+  color: #fff;
+}
+header nav .ionicon {
+  cursor: pointer;
+  color: white;
+  width: 48px;
+  display: none;
+}
+header nav a {
+  display: block;
+  border-bottom: var(--mainBorder);
+  border-color: transparent;
+}
+header a {
+  color: white;
+}
+header nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header nav.row a {
+  display: block;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 1.5px;
+}
+header nav img {
+  width: 120px;
+}
+header h1 {
+  font-weight: 300;
+  margin-top: 120px;
+}
+header a.btn {
+  margin-right: 25px;
+}
+
+/*  -- food delivery   --  */
+.order h3 {
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+.offer {
+  position: relative;
+}
+/*  -- images  --  */
+.imgs {
+  display: grid;
+  margin-top: 50px;
+}
+.imgs figure {
+  overflow: hidden;
+  background-color: #000;
+  width: 100%;
+  margin: 0;
+}
+.imgs img {
+  transition: all ease-in-out 0.5s;
+  opacity: 0.7;
+  width: 100%;
+  transform: scale(1.2);
+}
+.imgs img:hover {
+  opacity: 1;
+  transform: scale(1, 1.15);
+}
+
+/*  -- work spets --  */
+.steps-content div.steps span {
+  border: var(--mainBorder);
+  float: left;
+  text-align: center;
+  border-radius: 50%;
+  margin-right: 30px;
+  margin-bottom: 20px;
+  padding-top: 5px;
+  color: var(--acsentColor);
+}
+.steps-content a {
+  cursor: pointer;
+}
+/*  -- cities  --  */
+.cities {
+  background-color: #fff;
+}
+.cities div.cities-cards div img {
+  width: 100%;
+}
+.cities-cards h3 {
+  font-weight: lighter;
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  margin-top: 15px;
+}
+.cities-cards ion-icon {
+  font-size: 20px;
+  margin-right: 10px;
+}
+.cities-cards a {
+  color: var(--acsentColor);
+  display: inline-block;
+  border-bottom: 1px solid var(--acsentColor);
+}
+/*  -- comments  --  */
+.comments {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url(../img/back-customers.jpg) no-repeat fixed;
+  background-size: cover;
+  color: #fff;
+}
+.comments blockquote div::before {
+  content: '\201C';
+  font-size: 5rem;
+  display: block;
+  position: absolute;
+  top: -50px;
+  left: 0;
+}
+.comments div p {
+  font-style: italic;
+  line-height: 1.3;
+}
+.comments div p:last-of-type img {
+  width: 64px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+.comments blockquote div {
+  padding-top: 60px;
+  position: relative;
+}
+.comments div p:last-of-type {
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+}
+
+/*  -- offers  --  */
+.price-cards h2 {
+  margin-top: 60px;
+}
+.price-cards section div:first-of-type,
+.price-cards section div:last-of-type {
+  background-color: rgb(252, 249, 249);
+  margin-bottom: 2px;
+  padding: 10px 15px;
+}
+.price-cards p:first-of-type {
+  color: var(--acsentColor);
+}
+.price-cards ul {
+  background-color: #fff;
+  margin-bottom: 2px;
+}
+.price-cards ul li {
+  margin-bottom: 10px;
+}
+
+/*  -- forms  --  */
+.forms {
+  background-color: #fff;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+.forms textarea {
+  height: 140px;
+}
+
+/*  -- footer  --  */
+footer {
+  background-color: rgb(24, 24, 24);
+  color: rgb(136, 135, 135);
+}
+footer a,
+footer a ion-icon {
+  color: rgb(146, 143, 143);
+}
+footer p {
+  text-align: center;
+  padding: 10px;
+}
+
+/*------------------- DESKTOP HD SCREENS ------------------------*/
+@media only screen and (min-width: 1300px) {
+  header {
+    margin-bottom: 80px;
+    padding: 30px 0;
+  }
+  header h1 {
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+  }
+  header nav ul {
+    display: flex;
+  }
+  header nav ul li {
+    margin-left: 40px;
+  }
+  header nav ul li:hover a {
+    border-color: var(--acsentColor);
+    transition: border-color 0.3s ease-in-out;
+  }
+  header + article.row {
+    width: 60%;
+  }
+  div.order {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 30px;
+    margin-top: 80px;
+  }
+  div.order ion-icon {
+    font-size: 2.5rem;
+  }
+  div.imgs {
+    grid-template-columns: repeat(4, 25%);
+  }
+  section.work-steps {
+    margin-top: 60px;
+    padding-bottom: 80px;
+  }
+  section.work-steps div.steps-content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 120px;
+    margin-top: 100px;
+    align-items: center;
+  }
+  div.steps-content img {
+    grid-column: 2/3;
+    width: 100%;
+  }
+  div.steps-content div.steps {
+    grid-column: 3/5;
+  }
+  div.steps-content div.steps p {
+    margin-bottom: 40px;
+    font-size: 0.9rem;
+  }
+  div.steps-content div.steps span {
+    width: 60px;
+    height: 60px;
+    font-size: 1.2rem;
+  }
+  div.steps-content div.steps a img {
+    width: 200px;
+  }
+  div.steps-content div.steps a:first-of-type {
+    margin-right: 20px;
+  }
+  section.cities {
+    padding: 80px 0 80px 0;
+  }
+  section.cities div.cities-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 30px;
+  }
+  .comments blockquote {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 50px;
+    text-align: justify;
+    margin-top: 40px;
+  }
+  .comments blockquote div::before {
+    font-size: 5rem;
+  }
+  .price-cards {
+    padding-bottom: 60px;
+  }
+  .price-cards div.cards {
+    display: flex;
+    justify-content: space-between;
+  }
+  .price-cards section {
+    flex-basis: 30%;
+  }
+  .price-cards h3 {
+    font-weight: 300;
+    text-transform: uppercase;
+  }
+  .price-cards section div:first-of-type,
+  .price-cards section div:last-of-type {
+    padding: 20px 25px;
+  }
+  .price-cards p:first-of-type {
+    font-size: 2.8rem;
+    font-weight: 100;
+  }
+  .price-cards p:first-of-type span {
+    font-size: 0.9rem;
+    font-weight: 300;
+  }
+  .price-cards p:last-of-type {
+    font-size: 0.8rem;
+  }
+  .price-cards ul {
+    padding: 20px 25px;
+  }
+  .price-cards ul li ion-icon {
+    margin-right: 10px;
+    font-size: 0.8rem;
+  }
+  .price-cards section div:last-of-type {
+    display: flex;
+    justify-content: center;
+  }
+  .forms {
+    padding-top: 40px;
+  }
+  .forms h2 {
+    width: 60%;
+    margin: 40px auto;
+  }
+  .forms form {
+    width: 60%;
+    margin: 40px auto;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-column-gap: 30px;
+    grid-row-gap: 20px;
+    font-size: 1rem;
+  }
+  .forms h3 {
+    font-size: 1rem;
+    font-weight: 300;
+  }
+  .forms input:not([type='submit']),
+  .forms select,
+  .forms textarea,
+  .forms label[for='yes'],
+  .forms select,
+  .forms option {
+    padding: 15px 20px;
+    font: 300 1rem var(--mainFont);
+  }
+  .forms input[type='checkbox'] {
+    width: 20px;
+    height: 20px;
+  }
+  .forms div.submit {
+    grid-column: 2;
+  }
+  footer {
+    font-size: 0.8rem;
+    padding: 60px 0;
+  }
+  footer nav,
+  footer nav ul,
+  footer nav ol {
+    display: flex;
+    justify-content: space-between;
+  }
+  footer nav ul li {
+    margin-right: 30px;
+  }
+  footer nav ol li {
+    margin-left: 30px;
+    font-size: 1rem;
+  }
+  footer p:first-of-type {
+    margin-top: 40px;
+  }
+}
+/*------------- Desktop Medium Screen ---------------- */
+@media only screen and (min-width: 992px) and (max-width: 1300px) {
+  .row {
+    max-width: 930px;
+    margin: 0 auto;
+    width: 95%;
+  }
+  .btn,
+  .btn-outline,
+  .btn-outline:hover {
+    font-size: 0.9rem;
+  }
+
+  h2 {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  header {
+    padding-top: 30px;
+  }
+  header nav.row a {
+    font-size: 0.7rem;
+  }
+  header nav ul {
+    display: flex;
+  }
+  header nav ul li {
+    margin-left: 40px;
+  }
+  header nav ul li a:hover {
+    border-color: var(--acsentColor);
+    transition: border-color 0.3s ease-in-out;
+  }
+  header h1 {
+    font-size: 1.9rem;
+    margin-bottom: 80px;
+  }
+  header + article {
+    padding-top: 60px;
+  }
+  div.order {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+    margin-top: 50px;
+  }
+  div.order ion-icon {
+    font-size: 2rem;
+  }
+  div.imgs {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  section.work-steps {
+    margin-top: 60px;
+    padding-bottom: 80px;
+  }
+  section.work-steps div.steps-content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-column-gap: 80px;
+    margin-top: 100px;
+    align-items: center;
+  }
+  div.steps-content img {
+    width: 70%;
+  }
+  div.steps-content div.steps p {
+    margin-bottom: 40px;
+    font-size: 0.9rem;
+  }
+  div.steps-content div.steps span {
+    font-size: 1.2rem;
+    width: 65px;
+    height: 65px;
+  }
+  div.steps-content div.steps a img {
+    width: 200px;
+  }
+  div.steps-content div.steps a:first-of-type {
+    margin-right: 20px;
+  }
+  section.cities {
+    padding: 80px 0 80px 0;
+  }
+  section.cities div.cities-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 30px;
+    grid-row-gap: 60px;
+  }
+  section.cities div.cities-cards h3 {
+    font-weight: 300;
+  }
+  .comments blockquote {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 50px;
+    margin-top: 40px;
+  }
+  .comments blockquote div::before {
+    font-size: 5rem;
+  }
+  .price-cards {
+    padding-bottom: 80px;
+  }
+  .price-cards div.cards {
+    display: flex;
+    justify-content: space-between;
+  }
+  .price-cards section {
+    flex-basis: 32%;
+    font-size: 0.8rem;
+  }
+  .price-cards h3 {
+    font-weight: 300;
+    text-transform: uppercase;
+  }
+  .price-cards p:first-of-type {
+    font-size: 2rem;
+    font-weight: 100;
+  }
+  .price-cards p:first-of-type span {
+    font-size: 0.9rem;
+    font-weight: 300;
+  }
+  .price-cards p:last-of-type {
+    font-size: 0.7rem;
+  }
+  .price-cards ul {
+    padding: 10px 15px;
+  }
+  .price-cards ul li ion-icon {
+    margin-right: 10px;
+    font-size: 0.7rem;
+  }
+  .price-cards section div:last-of-type {
+    display: flex;
+    justify-content: center;
+  }
+  .forms h2 {
+    width: 90%;
+  }
+  .forms form {
+    width: 90%;
+    padding: 30px;
+    margin: 60px auto;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-column-gap: 30px;
+    grid-row-gap: 20px;
+    font-size: 1rem;
+  }
+  .forms h3 {
+    font-size: 1rem;
+    font-weight: 300;
+  }
+  .forms input:not([type='submit']),
+  .forms select,
+  .forms textarea,
+  .forms label[for='yes'],
+  .forms select,
+  .forms option {
+    padding: 15px 20px;
+    font: 300 1rem var(--mainFont);
+  }
+  .forms input[type='checkbox'] {
+    width: 20px;
+    height: 20px;
+  }
+  .forms div.submit {
+    grid-column: 2;
+  }
+  footer {
+    font-size: 0.8rem;
+    padding: 60px 0;
+  }
+  footer nav,
+  footer nav ul,
+  footer nav ol {
+    display: flex;
+    justify-content: space-between;
+  }
+  footer nav ul li {
+    margin-right: 30px;
+  }
+  footer nav ol li {
+    margin-left: 30px;
+    font-size: 1rem;
+  }
+  footer p:first-of-type {
+    margin-top: 40px;
+  }
+}
+
+/*---------------- Planshet Screen ----------------*/
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+  .row {
+    margin: 0 auto;
+    width: 90%;
+  }
+  .btn,
+  .btn-outline,
+  .btn-outline:hover {
+    font-size: 0.9rem;
+  }
+  h2 {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.5rem;
+  }
+  header {
+    margin-bottom: 40px;
+    padding: 40px 0;
+  }
+
+  header nav img {
+    margin-bottom: 50px;
+    margin-right: 80px;
+  }
+
+  div.menu {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+  }
+  header nav .ionicon {
+    display: block;
+  }
+  ul.nav {
+    position: absolute;
+    right: 30px;
+    opacity: 0;
+    height: 0px;
+    transition: 0.5s;
+    overflow: hidden;
+  }
+  nav ul.nav li {
+    text-align: right;
+    padding: 5px 10px;
+    width: 220px;
+    background-color: rgba(32, 32, 32, 0.26);
+    margin-bottom: 2px;
+  }
+  nav ul header nav ul.nav a {
+    font-size: 0.7rem;
+    border-bottom: none;
+    padding: 7px 25px;
+  }
+  nav ul.nav li:hover {
+    background-color: rgba(46, 45, 45, 0.486);
+  }
+  div.menu:hover ul.nav {
+    opacity: 1;
+    height: 220px;
+  }
+  nav ul.nav li:hover a {
+    color: rgb(221, 221, 221);
+  }
+
+  header h1 {
+    font-size: 1.5rem;
+    margin-bottom: 80px;
+  }
+  div.order {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+    margin-top: 50px;
+  }
+  div.order ion-icon {
+    font-size: 2rem;
+  }
+  div.imgs {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  section.work-steps {
+    margin-top: 80px;
+    padding-bottom: 40px;
+  }
+
+  div.steps-content img {
+    width: 300px;
+    margin: 60px auto;
+    display: block;
+  }
+  .steps-content div.steps p {
+    position: relative;
+    margin-bottom: 45px;
+    padding-left: 80px;
+  }
+  .steps-content div.steps span {
+    width: 55px;
+    height: 55px;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  .steps-content div.steps a img {
+    width: 200px;
+    display: inline-block;
+    margin: 10px 30px 40px 0;
+  }
+
+  section.cities {
+    padding: 60px 0;
+  }
+  section.cities div.cities-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 30px;
+    grid-row-gap: 60px;
+  }
+  section.cities div.cities-cards h3 {
+    font-weight: 300;
+  }
+  .comments {
+    font-size: 0.8rem;
+  }
+  .comments blockquote div::before {
+    font-size: 3.3rem;
+    top: -20px;
+  }
+  .comments blockquote div {
+    padding-bottom: 40px;
+  }
+  .comments div p:last-of-type {
+    margin-top: 30px;
+  }
+  .price-cards {
+    padding-bottom: 80px;
+  }
+  .price-cards section {
+    font-size: 0.8rem;
+    margin-bottom: 40px;
+  }
+  .price-cards h3 {
+    font-weight: 300;
+    text-transform: uppercase;
+  }
+  .price-cards p:first-of-type {
+    font-size: 2rem;
+    font-weight: 100;
+  }
+  .price-cards p:first-of-type span {
+    font-size: 0.9rem;
+    font-weight: 300;
+  }
+  .price-cards p:last-of-type {
+    font-size: 0.7rem;
+  }
+  .price-cards ul {
+    padding: 10px 15px;
+  }
+  .price-cards ul li ion-icon {
+    margin-right: 10px;
+    font-size: 0.7rem;
+  }
+  .price-cards section div:last-of-type {
+    display: flex;
+    justify-content: center;
+  }
+  .forms form {
+    padding: 30px;
+    margin: 60px auto;
+    font-size: 0.9rem;
+    width: 80%;
+    margin: 0 auto;
+  }
+  .forms h3 {
+    font-size: 0.85rem;
+    font-weight: 300;
+    margin-bottom: 10px;
+  }
+  .forms input:not([type='submit']),
+  .forms select,
+  .forms textarea,
+  .forms select,
+  .forms option {
+    display: block;
+    width: 100%;
+    padding: 10px 15px;
+    font: 300 0.85rem var(--mainFont);
+    margin-bottom: 25px;
+  }
+  div.forms form input {
+    margin-top: 10px;
+  }
+  .forms input[type='checkbox'] {
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+  }
+  footer {
+    font-size: 0.8rem;
+    padding: 60px 0;
+  }
+  footer nav,
+  footer nav ul,
+  footer nav ol {
+    display: flex;
+    justify-content: space-between;
+  }
+  footer nav ul li {
+    margin-right: 30px;
+  }
+  footer nav ol li {
+    margin-left: 30px;
+    font-size: 1rem;
+  }
+  footer p:first-of-type {
+    margin-top: 40px;
+  }
+}
+
+@media only screen and (min-width: 577px) and (max-width: 768px) {
+  .row {
+    margin: 0 auto;
+    width: 90%;
+  }
+  .btn,
+  .btn-outline,
+  .btn-outline:hover {
+    font-size: 0.9rem;
+  }
+  h2 {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.4rem;
+  }
+  header {
+    margin-bottom: 40px;
+    padding: 40px 0;
+  }
+  header nav img {
+    margin-bottom: 50px;
+    margin-right: 80px;
+  }
+  div.menu {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+  }
+  header nav .ionicon {
+    display: block;
+  }
+  ul.nav {
+    position: absolute;
+    right: 30px;
+    opacity: 0;
+    height: 0px;
+    transition: 0.5s;
+    overflow: hidden;
+  }
+  nav ul.nav li {
+    text-align: right;
+    padding: 5px 10px;
+    width: 200px;
+    background-color: rgba(32, 32, 32, 0.26);
+    margin-bottom: 2px;
+  }
+  nav ul header nav ul.nav a {
+    font-size: 0.7rem;
+    border-bottom: none;
+    padding: 7px 25px;
+  }
+  nav ul.nav li:hover {
+    background-color: rgba(46, 45, 45, 0.486);
+  }
+  div.menu:hover ul.nav {
+    opacity: 1;
+    height: 220px;
+  }
+  nav ul.nav li:hover a {
+    color: rgb(221, 221, 221);
+  }
+  header nav.row a {
+    font-size: 0.7rem;
+    border-bottom: none;
+  }
+  header ion-icon[name='menu-outline'] {
+    display: block;
+    text-align: center;
+  }
+  header h1 {
+    font-size: 1.5rem;
+    margin-bottom: 80px;
+    margin-top: 80px;
+  }
+  header nav ul li a:hover {
+    border-bottom: none;
+  }
+  div.order {
+    margin-top: 50px;
+    font-size: 1rem;
+  }
+  div.order div {
+    margin-bottom: 40px;
+  }
+  div.order ion-icon {
+    font-size: 2rem;
+  }
+  div.imgs {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  section.work-steps {
+    margin-top: 60px;
+    padding-bottom: 30px;
+  }
+
+  div.steps-content img {
+    width: 200px;
+    margin: 40px auto;
+    display: block;
+  }
+  .steps-content div.steps p {
+    font-size: 0.9rem;
+    position: relative;
+    margin-bottom: 30px;
+    padding-left: 80px;
+  }
+  .steps-content div.steps span {
+    width: 50px;
+    height: 50px;
+    font-size: 1rem;
+    padding-top: 5px;
+    float: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-weight: 400;
+  }
+  .steps-content div.steps a {
+    margin-bottom: 25px;
+  }
+  .steps-content div.steps a img {
+    width: 180px;
+    display: inline-block;
+    margin: 30px 30px 0;
+  }
+
+  section.cities {
+    padding: 80px 0 30px 0;
+    /* overflow: hidden; */
+    font-size: 1rem;
+  }
+  section.cities .cities-cards div {
+    margin-bottom: 60px;
+  }
+  .comments {
+    padding-bottom: 40px;
+  }
+
+  .comments blockquote div::before {
+    font-size: 3rem;
+    top: -20px;
+  }
+  .comments blockquote div {
+    padding-top: 30px;
+    padding-bottom: 40px;
+  }
+  .comments div p {
+    font-size: 0.9rem;
+  }
+  .comments div p:last-of-type {
+    margin-top: 30px;
+  }
+  .comments div p:last-of-type img {
+    width: 56px;
+  }
+  .price-cards {
+    padding-bottom: 40px;
+  }
+  .price-cards section {
+    font-size: 0.9rem;
+    margin-bottom: 40px;
+  }
+  .price-cards h3 {
+    font-weight: 300;
+    text-transform: uppercase;
+  }
+  .price-cards p:first-of-type {
+    font-size: 1.3rem;
+  }
+  .price-cards p:first-of-type span {
+    font-size: 0.7rem;
+  }
+  .price-cards ul {
+    padding: 10px 15px;
+  }
+  .price-cards ul li ion-icon {
+    margin-right: 10px;
+    font-size: 15px;
+  }
+  .price-cards section div:last-of-type {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 15px;
+  }
+  .forms form {
+    padding: 30px;
+    margin: 0 auto;
+    font-size: 1rem;
+    width: 80%;
+    margin: 0 auto;
+  }
+  .forms h3 {
+    font-size: 1rem;
+    font-weight: 300;
+    margin-bottom: 10px;
+  }
+  .forms input:not([type='submit']),
+  .forms select,
+  .forms textarea,
+  .forms select,
+  .forms option {
+    display: block;
+    width: 100%;
+    padding: 8px 15px;
+    font: 300 1rem var(--mainFont);
+    margin-bottom: 25px;
+  }
+  .forms label:not([for='yes']) {
+    display: none;
+  }
+  div.forms form input {
+    margin-top: 10px;
+  }
+  .forms input[type='checkbox'] {
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+  }
+  footer {
+    padding: 30px 0;
+  }
+  footer nav {
+    display: flex;
+    justify-content: space-around;
+    font-size: 0.9rem;
+  }
+  footer nav ol {
+    display: flex;
+  }
+  footer nav ol li:not(footer nav ol li:last-of-type) {
+    margin-right: 30px;
+  }
+  footer nav ul {
+    margin-bottom: 30px;
+  }
+  footer p {
+    font-size: 0.8rem;
+  }
+  footer p:first-of-type {
+    margin-top: 20px;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .row {
+    margin: 0 16px;
+  }
+  .btn,
+  .btn-outline,
+  .btn-outline:hover {
+    font-size: 15px;
+  }
+  html {
+    font-size: 18px;
+  }
+  body {
+    line-height: 1.4;
+    min-width: 360px;
+  }
+  h2 {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.8rem;
+  }
+  header {
+    margin-bottom: 40px;
+    padding: 40px 0;
+  }
+  header nav {
+    position: relative;
+  }
+  header nav ul li a {
+    border-bottom: none;
+  }
+
+  div.menu {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+  }
+  header nav .ionicon {
+    display: block;
+  }
+  ul.nav {
+    position: absolute;
+    right: 30px;
+    opacity: 0;
+    height: 0px;
+    transition: 0.3s;
+    overflow: hidden;
+  }
+  nav ul.nav li {
+    text-align: right;
+    padding: 5px 10px;
+    width: 200px;
+    background-color: rgba(32, 32, 32, 0.26);
+    margin-bottom: 2px;
+  }
+  nav ul header nav ul.nav a {
+    font-size: 0.7rem;
+    border-bottom: none;
+    padding: 7px 10px;
+  }
+  nav ul.nav li:hover {
+    background-color: rgba(46, 45, 45, 0.486);
+  }
+  div.menu:hover ul.nav {
+    opacity: 1;
+    height: 220px;
+  }
+  nav ul.nav li:hover a {
+    color: rgb(221, 221, 221);
+  }
+  header nav img {
+    width: 80px;
+    margin-bottom: 40px;
+    margin-right: 20px;
+  }
+  header a {
+    font-size: 16px;
+  }
+  header nav ul {
+    margin-bottom: 40px;
+  }
+  header nav.row ul li a {
+    letter-spacing: 1.1px;
+    border-bottom: none;
+  }
+  header nav.row ul li a:hover {
+    border-bottom: none;
+  }
+  header h1 {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+  }
+  header a.btn {
+    display: block;
+    width: 170px;
+    text-align: center;
+    margin-top: 20px;
+  }
+  div.order {
+    margin-top: 50px;
+    font-size: 1rem;
+  }
+  div.order div {
+    margin-bottom: 40px;
+  }
+  div.order ion-icon {
+    font-size: 2rem;
+  }
+  div.imgs {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  section.work-steps {
+    margin-top: 60px;
+    padding-bottom: 30px;
+  }
+
+  div.steps-content img {
+    width: 200px;
+    margin: 40px auto;
+    display: block;
+  }
+  .steps-content div.steps p {
+    font-size: 1rem;
+    position: relative;
+    margin-bottom: 30px;
+    padding-left: 60px;
+  }
+  .steps-content div.steps span {
+    width: 50px;
+    height: 50px;
+    font-size: 1.2rem;
+    padding-top: 5px;
+    float: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-weight: 400;
+  }
+  .steps-content div.steps a {
+    margin-bottom: 25px;
+  }
+  .steps-content div.steps a img {
+    width: 180px;
+    display: inline-block;
+    margin: 30px 30px 0;
+  }
+  section.cities {
+    padding: 80px 0 30px 0;
+    font-size: 1rem;
+  }
+  section.cities .cities-cards div {
+    margin-bottom: 60px;
+  }
+  .comments {
+    padding-bottom: 40px;
+    font-size: 1rem;
+  }
+  .comments blockquote div::before {
+    font-size: 3rem;
+    top: -20px;
+  }
+  .comments blockquote div {
+    padding-top: 30px;
+    padding-bottom: 40px;
+  }
+  .comments div p {
+    font-size: 16px;
+  }
+  .comments div p:last-of-type {
+    margin-top: 30px;
+  }
+  .comments div p:last-of-type img {
+    width: 56px;
+  }
+  .price-cards {
+    padding-bottom: 40px;
+  }
+  .price-cards section {
+    font-size: 16px;
+    margin-bottom: 40px;
+  }
+  .price-cards h3 {
+    font-weight: 300;
+    text-transform: uppercase;
+  }
+  .price-cards p:first-of-type {
+    font-size: 1.5rem;
+  }
+  .price-cards p:first-of-type span {
+    font-size: 15px;
+  }
+  .price-cards p:last-of-type {
+    font-size: 15px;
+  }
+  .price-cards ul {
+    padding: 10px 15px;
+  }
+  .price-cards ul li ion-icon {
+    margin-right: 10px;
+    font-size: 15px;
+  }
+  .price-cards section div:last-of-type {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 15px;
+  }
+  .forms form {
+    padding: 30px;
+    margin: 0 auto;
+    font-size: 16px;
+    width: 80%;
+    margin: 0 auto;
+  }
+  .forms h3 {
+    font-size: 16px;
+    font-weight: 300;
+    margin-bottom: 10px;
+  }
+  .forms input:not([type='submit']),
+  .forms select,
+  .forms textarea,
+  .forms select,
+  .forms option {
+    display: block;
+    width: 100%;
+    padding: 8px 15px;
+    font: 300 16px var(--mainFont);
+    margin-bottom: 25px;
+  }
+  .forms label:not([for='yes']) {
+    display: none;
+  }
+  div.forms form input {
+    margin-top: 10px;
+  }
+  .forms input[type='checkbox'] {
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+  }
+  footer {
+    padding: 30px 0;
+  }
+  footer nav {
+    display: flex;
+    justify-content: space-around;
+    font-size: 1.3rem;
+  }
+  footer nav ol {
+    display: flex;
+  }
+  footer nav ol li:not(footer nav ol li:last-of-type) {
+    margin-right: 30px;
+  }
+  footer nav ul {
+    margin-bottom: 30px;
+  }
+  footer p {
+    font-size: 1rem;
+  }
+  footer p:first-of-type {
+    margin-top: 20px;
+  }
+}
